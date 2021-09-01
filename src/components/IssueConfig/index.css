@@ -1,0 +1,18 @@
+.btn-sm-green{
+    width: 1px;
+    height: 1px;
+    background-color: rgb(16, 214, 16);
+    font-size: 5px;
+}
+
+.bg-dark-grey{
+    background-color: rgb(230, 228, 228);
+}
+
+.btn-priority:hover{
+    border-color: rgb(16, 214, 16);
+}
+.btn-priority:focus{
+    background-color: rgb(16, 214, 16);
+    color: white;
+}
