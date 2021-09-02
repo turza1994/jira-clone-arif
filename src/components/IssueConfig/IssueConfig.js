@@ -9,7 +9,7 @@ const IssueConfig = () => {
             <p className="fs-5">
                 <span className="text-muted fw-lighter">TEST-1944</span>
                 <span className="text-dark fw-lighter"> : Sample REST API Test</span>
-                <i className="btn fas fa-edit ps-3 text-primary"></i>
+                <i style={{ color: '#59f', paddingLeft: '5px'}} className="fas fa-edit"></i>
             </p>
             <Tabs>
                 <TabList>

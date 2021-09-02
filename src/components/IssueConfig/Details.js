@@ -1,93 +1,99 @@
 import React from 'react';
+import { BtnBlack, BtnCross, BtnGreenSm, BtnPriority, BtnRound } from '../../styled-components/Button.styled';
+import { Container } from '../../styled-components/Container.styled';
+import { Col, Row } from '../../styled-components/Grid.styled';
+import { Input, Select } from '../../styled-components/Input.styled';
 import './index.css';
 
 const Details = () => {
     return (
-        <div className="container Details pt-5">
-            <div className="row">
-                <div className="col-12 col-sm-7 d-flex justify-content-center">
-                    <table className="w-100">
+        <Container>
+            <Row>
+                <Col justifySelf='end' alignSelf='center'>
+                    <table style={{ paddingTop: '50px' }} >
                         <tbody>
                             <tr>
                                 <td>
                                     <p className="px-4 my-auto">Folder</p>
                                 </td>
-                                <td>
-                                    <input type="text" value="Sample Example > RestApi Example" disabled className="w-100 bg-dark-grey text-dark border-0 py-1 px-3" />
+                                <td colSpan="2">
+                                    <Input type="text" value="Sample Example > RestApi Example" disabled='false' className="w-100 bg-dark-grey text-dark border-0 py-1 px-3" />
                                 </td>
                                 <td>
                                     <div className="ms-4">
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-plus"></i></button>
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-check"></i></button>
-                                        <button className="btn btn-sm-green ms-2 shadow"></button>
+                                        <BtnRound> <i className="fas fa-plus"></i> </BtnRound>
+                                        <BtnRound> <i className="fas fa-check"></i> </BtnRound>
+                                        <BtnGreenSm />
                                     </div>
                                 </td>
                             </tr>
-                            <br />
+                            
                             <tr>
                                 <td>
                                     <p className="px-4 my-auto">Feature</p>
                                 </td>
-                                <td>
-                                    <input type="text" value="Sample Feature > Sample REST API" disabled className="w-100 bg-dark-grey text-dark border-0 py-1 px-3" />
+                                <td colSpan="2">
+                                    <Input type="text" value="Sample Feature > Sample REST API" disabled className="w-100 bg-dark-grey text-dark border-0 py-1 px-3" />
                                 </td>
                                 <td>
                                     <div className="ms-4">
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-plus"></i></button>
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-check"></i></button>
-                                        <button className="btn btn-sm-green ms-2 shadow"></button>
+                                        <BtnRound> <i className="fas fa-plus"></i> </BtnRound>
+                                        <BtnRound> <i className="fas fa-check"></i> </BtnRound>
+                                        <BtnGreenSm />
                                     </div>
                                 </td>
                             </tr>
-                            <br />
+                            
                             <tr>
                                 <td>
                                     <p className="px-4 my-auto">Priority</p>
                                 </td>
-                                <td className="d-flex justify-content-between">
-                                    <button className="w-25 bg-dark-grey text-dark py-1 border-0 me-1 btn-priority">P1</button>
-                                    <button className="w-25 bg-dark-grey text-dark py-1 border-0 me-1 btn-priority">P2</button>
-                                    <button className="w-25 bg-dark-grey text-dark py-1 border-0 me-1 btn-priority">P3</button>
-                                    <button className="w-25 bg-dark-grey text-dark py-1 border-0 me-1 btn-priority">P4</button>
+                                <td colSpan="2">
+                                    <div style={{width: '100%',display: 'flex', justifyContent: 'space-between'}}>
+                                        <BtnPriority>P1</BtnPriority>
+                                        <BtnPriority>P2</BtnPriority>
+                                        <BtnPriority>P3</BtnPriority>
+                                        <BtnPriority>P4</BtnPriority>
+                                    </div>
                                 </td>
                                 <td>
-                                    <div className="ms-4">
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-check"></i></button>
+                                    <div colSpan="2" style={{ marginLeft: '42%' }}>
+                                        <BtnRound> <i className="fas fa-check"></i> </BtnRound>
                                     </div>
                                 </td>
                             </tr>
-                            <br />
+                            
                             <tr>
                                 <td>
                                     <p className="px-4 my-auto">Label(s)</p>
                                 </td>
-                                <td className="">
-                                <select className="form-select w-100" aria-label="Default select example">
-                                    <option defaultValue className="text-secondary">Search & select Labels...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <td colSpan="4">
+                                    <Select className="form-select w-100" aria-label="Default select example">
+                                        <option defaultValue className="text-secondary">Search & select Labels...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </Select>
                                 </td>
                                 <td>
                                     <div className="ms-4">
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-plus"></i></button>
-                                        <button className="btn btn-light rounded-circle text-secondary"><i className="fas fa-check"></i></button>
+                                        <BtnRound> <i className="fas fa-plus"></i> </BtnRound>
+                                        <BtnRound> <i className="fas fa-check"></i> </BtnRound>
                                     </div>
                                 </td>
                             </tr>
-                            <br />
+                            
                             <tr>
                                 <td className="d-flex justify-content-end align-items-center">
-                                    <button className="btn"><i className="fas fa-times"></i></button>
-                                    <button className="btn-dark" style={{ fontSize: '11px' }}>Test</button>
+                                    <BtnCross className="btn"><i className="fas fa-times"></i></BtnCross>
+                                    <BtnBlack className="btn-dark" style={{ fontSize: '11px' }}>Test</BtnBlack>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </Col>
 
-                <div className="col-12 col-sm-5 d-flex justify-content-start align-items-center">
+                <Col justifySelf='start' alignSelf='end'>
                     <table>
                         <tbody>
                             <tr>
@@ -116,9 +122,9 @@ const Details = () => {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
